@@ -8,7 +8,7 @@
 
   outputs = { nixpkgs, ... } @ inputs:
   {
-    nixosConfigurations.isitreal-laptop = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.bean = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [
         ./configuration.nix
@@ -26,6 +26,7 @@
         ./auto-upgrade.nix
         ./linux-kernel.nix
         ./screen.nix
+        ./nvidia.nix
         ./display-manager.nix
         ./theme.nix
         ./internationalisation.nix
