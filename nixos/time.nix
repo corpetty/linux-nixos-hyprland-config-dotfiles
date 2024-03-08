@@ -3,5 +3,5 @@
 {
   # Set your time zone.
   time.hardwareClockInLocalTime = true;
-  time.timeZone = "Europe/Kyiv";
+  time.timeZone = "America/New_York";
 }

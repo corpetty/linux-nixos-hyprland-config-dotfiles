@@ -45,11 +45,13 @@
     tre-command
     felix-fm
     chafa
+    feh
 
     cmatrix
     pipes-rs
     rsclock
     cava
     figlet
+    unzip
   ];
 }

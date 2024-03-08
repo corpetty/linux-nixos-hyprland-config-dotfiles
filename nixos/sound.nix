@@ -23,4 +23,6 @@
     pamixer
     pavucontrol
   ];
+
+  programs.noisetorch.enable = true;
 }

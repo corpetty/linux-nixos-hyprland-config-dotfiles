@@ -6,6 +6,22 @@
 
 [core]
 	excludesfile = ~/.gitignore
+    editor = nvim
+    commitGraph = true
+    autocrlf = input
+[web]
+    brave
+[credential "https://github.com"]
+    helper = 
+    helper = !/run/current-system/sw/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+    helper = 
+    helper = !/run/current-system/sw/bin/gh auth git-credential
+
 
 [gpg]
 	format = ssh
+
+[user]
+    email = corey@status.im
+    name = Corey Petty

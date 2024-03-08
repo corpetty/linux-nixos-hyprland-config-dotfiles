@@ -19,7 +19,7 @@ return {
     },
     {
       source = {
-        File = '/home/xnm/.config/wezterm/lain.gif',
+        File = '/home/petty/.config/wezterm/lain.gif',
       },
       opacity = 0.05,
       vertical_align = "Middle",
