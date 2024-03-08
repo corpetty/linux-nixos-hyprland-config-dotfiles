@@ -1,6 +1,20 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 
 {
+  programs.dconf.enable = true;
+  users.users.petty.extraGroups = [ "libvirtd" ];
+  virtualisation = {
+    libvirtd = {
+      enable = true;
+      qemu = {
+        swtpm.enable = true;
+        ovmf.enable = true;
+        ovmf.packages = [ pkgs.OVMFFull.fd ];
+      };
+    };
+    spiceUSBRedirection.enable = true;
+  };
+  services.spice-vdagentd.enable = true;
   # Enable Containerd
   # virtualisation.containerd.enable = true;
 
@@ -40,5 +54,16 @@
 
     # lazydocker
     # docker-credential-helpers
+    
+    # virtio
+    virt-manager
+    virt-viewer
+    spice
+    spice-gtk
+    spice-protocol
+    win-virtio
+    win-spice
+    gnome.adwaita-icon-theme
+    
   ];
 }
