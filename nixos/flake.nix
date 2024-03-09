@@ -54,7 +54,7 @@
         ./utils.nix
         ./terminal-utils.nix
         ./work.nix
-        #./gaming.nix
+        ./gaming.nix
       ];
     };
   };
