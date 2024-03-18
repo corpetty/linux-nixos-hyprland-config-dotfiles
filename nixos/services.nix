@@ -23,8 +23,18 @@
   services.fwupd.enable = true;
   services.auto-cpufreq.enable = true;
   # services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
+  xdg.portal = {
+    enable = true;
+    wlr.enable = true;
+    # gtk portal needed to make gtk apps happy
+    extraPortals = [
+     pkgs.xdg-desktop-portal-wlr
+     pkgs.xdg-desktop-portal-gtk 
+    ];
+  };
 
   environment.systemPackages = with pkgs; [
+    dbus
     at-spi2-atk
     qt6.qtwayland
     psi-notify

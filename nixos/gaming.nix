@@ -15,6 +15,9 @@
   # Packages required for work
   users.users.petty.packages = with pkgs; [
     steam
+    steam-run
+    gamescope
+    mangohud
     lutris
     corefonts
     vulkan-tools
@@ -22,4 +25,16 @@
     wineWowPackages.stableFull
     winetricks
   ];
+
+  # enable gamescope for Steam
+  nixpkgs.config.packageOverrides = pkgs: {
+    steam = pkgs.steam.override {
+      extraPkgs = pkgs: with pkgs; [
+        gamescope
+        mangohud
+      ];
+    };
+  };
+  programs.steam.gamescopeSession.enable = true;
+  programs.gamescope.capSysNice = true;
 }
