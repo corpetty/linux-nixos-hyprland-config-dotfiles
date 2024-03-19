@@ -16,6 +16,7 @@
         # ./fingerprint-scanner.nix
         ./yubikey.nix
         ./keycard.nix
+        ./camera.nix
         ./sound.nix
         ./usb.nix
         ./time.nix

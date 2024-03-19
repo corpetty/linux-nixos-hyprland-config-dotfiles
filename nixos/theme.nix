@@ -53,5 +53,18 @@
     # xsettingsd
     # gnome.gnome-shell-extensions
     # themechanger
+    # for QT
+    libsForQt5.qt5ct
   ];
+
+  # Some fixes for QT to render appropriately (Status)
+  environment.sessionVariables = {
+    QT_QPA_PLATFORM = "wayland";
+    QT_QPA_PLATFORMTHEME = "qt5ct";
+  };
+
+  qt = {
+    enable = true;
+    platformTheme = "qt5ct";
+  };
 }
