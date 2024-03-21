@@ -50,7 +50,7 @@
         ./virtualisation.nix
         ./programming-languages.nix
         ./lsp.nix
-        ./rust.nix
+        # ./rust.nix
         ./wasm.nix
         ./info-fetchers.nix
         ./utils.nix
