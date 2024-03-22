@@ -14,8 +14,11 @@
   environment.sessionVariables.GBM_BACKEND = "nvidia-drm";
   environment.sessionVariables.__GLX_VENDOR_LIBRARY_NAME = "nvidia";
 
+
+
   environment.systemPackages = with pkgs; [
     wezterm
+    alacritty
     cool-retro-term
 
     starship

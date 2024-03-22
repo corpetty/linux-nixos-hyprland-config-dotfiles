@@ -5,5 +5,6 @@
     mold
     gcc13
     jdk11
+    flameshot
   ];
 }

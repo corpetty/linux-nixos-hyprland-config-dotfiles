@@ -2,9 +2,9 @@
 
 {
   # Enable Theme
-  environment.variables.GTK_THEME = "Catppuccin-Macchiato-Standard-Teal-Dark";
-  environment.variables.XCURSOR_THEME = "Catppuccin-Macchiato-Teal";
-  environment.variables.XCURSOR_SIZE = "24";
+  environment.variables.GTK_THEME = "Gruvbox-Dark";
+  environment.variables.XCURSOR_THEME = "Gruvbox-Dark";
+  environment.variables.XCURSOR_SIZE = "20";
   console = {
     earlySetup = true;
     colors = [
@@ -28,13 +28,12 @@
   };
 
   # Override packages
-  nixpkgs.config.packageOverrides = pkgs: {
-    colloid-icon-theme = pkgs.colloid-icon-theme.override { colorVariants = ["teal"]; };
-    catppuccin-gtk = pkgs.catppuccin-gtk.override {
-      accents = [ "teal" ]; # You can specify multiple accents here to output multiple themes 
-      size = "standard";
-      variant = "macchiato";
-    };
+  nixpkgs.config.packageOverrides = pkgs: { colloid-icon-theme = pkgs.colloid-icon-theme.override { colorVariants = ["orange"]; };
+    # catppuccin-gtk = pkgs.catppuccin-gtk.override {
+      # accents = [ "teal" ]; # You can specify multiple accents here to output multiple themes 
+      # size = "standard";
+      # variant = "macchiato";
+    # };
     discord = pkgs.discord.override {
       withOpenASAR = true;
       withTTS = true;
@@ -44,7 +43,8 @@
   environment.systemPackages = with pkgs; [
     numix-icon-theme-circle
     colloid-icon-theme
-    catppuccin-gtk
+    # catppuccin-gtk
+    gruvbox-dark-gtk
     catppuccin-kvantum
     catppuccin-cursors.macchiatoTeal
 
