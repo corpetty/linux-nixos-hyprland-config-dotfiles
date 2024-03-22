@@ -66,7 +66,7 @@
     passExtensions.pass-update
     passExtensions.pass-otp
     passExtensions.pass-import
-    passExtensions.pass-audit
+    # passExtensions.pass-audit
     tomb
   ];
 }
