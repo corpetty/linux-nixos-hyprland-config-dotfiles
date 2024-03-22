@@ -26,7 +26,7 @@
   services.fail2ban.enable = true;
   security.pam.services.swaylock = {};
   # security.polkit.enable = true;
-  programs.browserpass.enable = true;
+  # programs.browserpass.enable = true;
   services.clamav = {
     daemon.enable = true;
     updater.enable = true;
