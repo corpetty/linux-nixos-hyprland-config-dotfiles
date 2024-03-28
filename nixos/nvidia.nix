@@ -21,8 +21,8 @@
     package =  pkgs.linuxKernel.packages.linux_zen.nvidia_x11_vulkan_beta;
     modesetting.enable = true;
     nvidiaSettings = true;
-    # forceFullCompositionPipeline = true;
-    open = true;
+    forceFullCompositionPipeline = true;
+    open = false;
     powerManagement.enable = true;
   };
   environment.systemPackages = with pkgs; [ nvidia-docker ];

@@ -5,14 +5,15 @@
   boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen;
   boot.kernelParams = [ 
     "quiet"
-    "fbcon=nodefer"
+    # "fbcon=nodefer"
     "vt.global_cursor_default=0"
-    "kernel.modules_disabled=1"
-    "lsm=landlock,lockdown,yama,integrity,apparmor,bpf,tomoyo,selinux"
+    "kernel.modules_disabled=0"
+    "lsm=landlock,lockdown,yama,integrity,apparmor,bpf,tomoyo"
     "usbcore.autosuspend=-1"
     "video4linux"
     "acpi_rev_override=5"
-    "security=selinux"
+    # "security=selinux"
+    "intel_pstate=active"
   ];
   # boot.kernelPatches = [ {
   #      name = "selinux-config";
