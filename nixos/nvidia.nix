@@ -18,9 +18,9 @@
       nvidia-vaapi-driver
     ];
   };
-  services.xserver.videoDrivers = [ "nvidia" ];
+  services.xserver.videoDrivers = [ "nvidiaBeta" ];
   hardware.nvidia = {
-    package =  pkgs.linuxKernel.packages.linux_zen.nvidia_x11_vulkan_beta;
+    package =  pkgs.linuxKernel.packages.linux_zen.nvidia_x11_production;
     modesetting.enable = true;
     nvidiaSettings = true;
     forceFullCompositionPipeline = true;
