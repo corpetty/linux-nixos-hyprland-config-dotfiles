@@ -19,10 +19,7 @@
     in 
   {
     nixosConfigurations.bean = nixpkgs.lib.nixosSystem {
-      specialArgs = { 
-        inherit inputs;
-        channels = { inherit nixpkgs stable;}; 
-      };
+      specialArgs.channels = { inherit nixpkgs stable; }; 
       modules = [
         ./configuration.nix
         ./hardware-configuration.nix
