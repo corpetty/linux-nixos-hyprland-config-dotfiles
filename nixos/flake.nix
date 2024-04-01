@@ -7,7 +7,16 @@
       stable.url = "nixpkgs/nixos-23.11";
   };
 
-  outputs = { nixpkgs, stable, ... } @ inputs:
+  outputs = { nixpkgs, stable, ... }:
+    let
+      overlay = final: prev: let
+        stablePkgs = import stable { inherit (prev) system; config.allowUnfree = true; };
+      in {
+        stable = stablePkgs;
+      };
+      # Overlays-module makes "pkgs.stable" available in configuration.nix
+      overlayModule = ({ config, pkgs, ... }: {nixpkgs.overlays = [ overlay ]; });
+    in 
   {
     nixosConfigurations.bean = nixpkgs.lib.nixosSystem {
       specialArgs = { 
