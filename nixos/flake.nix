@@ -10,7 +10,10 @@
   outputs = { nixpkgs, stable, ... } @ inputs:
   {
     nixosConfigurations.bean = nixpkgs.lib.nixosSystem {
-      specialArgs = { inherit inputs; };
+      specialArgs = { 
+        inherit inputs;
+        channels = { inherit nixpkgs stable;}; 
+      };
       modules = [
         ./configuration.nix
         ./hardware-configuration.nix
