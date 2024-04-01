@@ -14,7 +14,7 @@
       tdesktop
       vscode
       brave
-      obsidian
+      stable.obsidian
     ];
   };
 

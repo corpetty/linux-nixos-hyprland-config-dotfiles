@@ -4,9 +4,10 @@
   inputs = {
       nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
       rust-overlay.url = "github:oxalica/rust-overlay";
+      stable.url = "nixpkgs/nixos-23.11";
   };
 
-  outputs = { nixpkgs, ... } @ inputs:
+  outputs = { nixpkgs, stable, ... } @ inputs:
   {
     nixosConfigurations.bean = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };

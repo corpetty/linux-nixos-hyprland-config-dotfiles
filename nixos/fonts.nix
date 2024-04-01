@@ -7,23 +7,23 @@
     nerd-font-patcher
   ];
 
-  fonts = {
-    fontconfig = {
+  # fonts = {
+    # fontconfig = {
       # fixes pixelation
-      antialias = true;
+      # antialias = true;
 
       # fixes antialiasing blur
-      hinting = {
-        enable = true;
-        style = "full"; # no difference
-        autohint = true; # no difference
-      };
+      # hinting = {
+        # enable = true;
+        # style = "full"; # no difference
+        # autohint = true; # no difference
+      # };
 
-      subpixel = {
+      # subpixel = {
         # Makes it bolder
-        rgba = "rgb";
-        lcdfilter = "default"; # no difference
-      };
-    };
-  };
+        # rgba = "rgb";
+        # lcdfilter = "default"; # no difference
+      # };
+    # };
+  # };
 }
