@@ -7,6 +7,8 @@
     nerd-font-patcher
   ];
 
+  fonts.fontDir.enable = true;
+
   # fonts = {
     # fontconfig = {
       # fixes pixelation

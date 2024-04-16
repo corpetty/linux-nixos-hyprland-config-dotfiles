@@ -15,6 +15,7 @@
       vscode
       brave
       obsidian
+      (callPackage ./wavebox.nix {})
     ];
   };
 

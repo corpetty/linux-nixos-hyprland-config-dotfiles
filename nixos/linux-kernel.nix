@@ -14,6 +14,7 @@
     "acpi_rev_override=5"
     # "security=selinux"
     "intel_pstate=active"
+    "nvidia.NVreg_PreserveVideoMemoryAllocations=1"
   ];
   # boot.kernelPatches = [ {
   #      name = "selinux-config";
@@ -27,7 +28,7 @@
   #            '';
   # } ];
 
-  systemd.package = pkgs.systemd.override { withSelinux = true; };
+  # systemd.package = pkgs.systemd.override { withSelinux = true; };
 
   environment.systemPackages = with pkgs; [
     policycoreutils
