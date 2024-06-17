@@ -54,4 +54,9 @@
     imv
   ];
 
+  xdg.mime.defaultApplications = {
+    "x-scheme-handler/http" = "wavebox.desktop";
+    "x-scheme-handler/https" = "wavebox.desktop";
+  };
+
 }

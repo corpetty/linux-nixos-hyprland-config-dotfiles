@@ -35,8 +35,8 @@
       # variant = "macchiato";
     # };
     discord = pkgs.discord.override {
-      withOpenASAR = true;
-      withTTS = true;
+      # withOpenASAR = true;
+      # withTTS = true;
     };
   };
 
